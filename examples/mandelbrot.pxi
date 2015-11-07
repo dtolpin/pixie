@@ -8,7 +8,7 @@
             [pixie.time :refer [time]]))
 
 (with-config {:library "SDL2"
-              :cxx-flags ["`sdl2-config --cflags`"]
+              :cxx-flags ["`sdl2-config --cflags`" "-std=c++0x"]
               :includes ["SDL.h"]}
 
   (defcfn SDL_Init)
